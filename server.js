@@ -133,24 +133,6 @@ if (args.log) {
   app.use(morgan('FORMAT', { stream: WRITESTREAM }));
 }
 
-// console.log();
-// console.error();
-// console.warn();
-// console.debug();
-// console.trace();
-
-// let data = morgan('combined');
-
-// app.use(fs.writeFile('./access.log', data, 
-//   {flag: 'a'}, (err, req, res, next) => {
-//     if (err) {
-//       console.error(err);
-//     } else {
-//       console.log(data);
-//     }
-//   }
-// ));
-
 // app.post("app/new/user", (req, res, next) => {
 //   let data = {
 //     user: req.body.username,
@@ -159,17 +141,6 @@ if (args.log) {
 //   const stmt = db.prepare('INSERT INTO userinfo (username, password) VLUES (?, ?)');
 //   const info = stmt.run(data.user, data.pass);
 //   res.status(200).json(info);
-// });
-
-
-
-// app.get("/app/user/:id", (req, res) => {
-//   try {
-//     const stmt = logdb.prepare('SELECT * FROM userinfo WHERE id = ?').get(req.params.id);
-//     res.status(200).json(stmt);
-//   } catch (e) {
-//     console.error(e);
-//   }
 // });
 
 app.get('/app/flip', (req, res) => {
